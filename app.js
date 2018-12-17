@@ -22,10 +22,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+var verify = require('./util/verifyToken');
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
-app.use('/emp',emproute);
+app.use('/emp',verify,emproute);
 app.use('/user',userroute);
 
 // catch 404 and forward to error handler
