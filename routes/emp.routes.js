@@ -15,6 +15,7 @@ router.get('/getallemployees',service.getAllEmployees);
 router.get('/getemployeebyid/:id',service.getEmployeeById);
 router.put('/updateemployee/:id',service.updateEmployee);
 router.delete('/deleteemployee/:id',service.deleteEmployee);
+//Testing purpose
 // router.put('/updateemployee', function(req, res) {  
 //     var data = {    
 //         "id": req.body.id,  
