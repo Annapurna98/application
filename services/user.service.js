@@ -86,7 +86,7 @@ var loginUser = async (req,res,next)=>{
                 logger.error(err);
                 if(isMatch)
                 {
-                    var token = await jwt.sign({email : userData.email},"ANNAPURNA",{expiresIn : '30s'});
+                    var token = await jwt.sign({email : userData.email},"ANNAPURNA",{expiresIn : '50s'});
                     res.status(STATUS_CODES.OK).send({
                         "statusCode" : STATUS_CODES.OK,
                         "info" : "Login Successful",
