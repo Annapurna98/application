@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 var verify = require('./util/verifyToken');
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
-app.use('/emp',verify,emproute);//Added security JWT token to emp route
+app.use('/emp',verify,emproute);//Added security JWT token to emp routes
 app.use('/user',userroute);
 
 // catch 404 and forward to error handler

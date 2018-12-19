@@ -84,8 +84,8 @@ var getEmployeeById =  async (req,res,next)=>{
         }
         else
         {
-            res.status(STATUS_CODES.BAD_REQUEST).send({
-                "statusCode":STATUS_CODES.BAD_REQUEST,
+            res.status(STATUS_CODES.NOT_FOUND).send({
+                "statusCode":STATUS_CODES.NOT_FOUND,
                 "info":"Id not Found",
                 "employees":empData
             })
